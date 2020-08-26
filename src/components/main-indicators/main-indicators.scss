@@ -1,0 +1,21 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.main-indicators {
+  @include secondaryFont;
+  background-color: rgba(238, 238, 238, 0.4);
+  position: absolute;
+  top: 45px;
+  left: 35px;
+  padding: 0px 20px 12px 20px;
+  border-radius: 6px;
+
+  .temperature {
+    font-size: 65px;
+    color: $textColorDark;
+  }
+  .description {
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+}

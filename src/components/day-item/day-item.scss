@@ -1,0 +1,44 @@
+@import '../../styles/variables';
+
+.day-item {
+  flex: 1 0 100px;
+  text-align: center;
+  border-top: 2px solid #E3E1E1;
+
+  .description {
+    padding-top: 14px;
+    padding-bottom: 13px;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $textColorOrange;
+  }
+  .icon {
+    height: 48px;
+  }
+
+  .temperature {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 14px;
+    color: $textColorDark;
+  }
+
+  .date {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 10px 32px;
+    background-color: $backgroundColorDark;
+  }
+  .active {
+    background-color: #676D77;
+  }
+  &:hover {
+    cursor: pointer;
+    border-top: 2px solid #FD7013;
+  }
+
+}
+.active {
+  background-color: #eeeeee;
+}

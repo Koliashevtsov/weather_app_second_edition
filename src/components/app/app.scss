@@ -1,0 +1,7 @@
+@import '../../styles/mixins';
+
+.app {
+  @include mainFont;
+  width: 500px;
+  margin: 0 auto;
+}
