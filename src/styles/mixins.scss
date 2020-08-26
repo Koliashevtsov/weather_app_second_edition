@@ -1,0 +1,9 @@
+@mixin mainFont {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+}
+
+@mixin secondaryFont {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}

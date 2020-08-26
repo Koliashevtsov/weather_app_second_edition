@@ -1,0 +1,8 @@
+@import '../../styles/variables';
+
+.header {
+  background-color: $backgroundColorDark;
+  padding: 11px;
+  display: flex;
+  justify-content: space-between;
+}

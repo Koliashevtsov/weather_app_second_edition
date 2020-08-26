@@ -1,0 +1,35 @@
+@import '../../styles/variables';
+
+.hour-item {
+  flex: 1 0 82px;
+  padding-bottom: 17px;
+  border-bottom: 2px solid #E3E1E1;
+  text-align: center;
+  .duration {
+    padding: 5px 9px;
+    background-color: $backgroundColorDark;
+    color: #ffffff;
+  }
+  .active {
+    background-color: #676D77;
+  }
+  .description {
+    padding-top: 12px;
+    color: $textColorDark;
+    text-transform: uppercase;
+  }
+  .icon {
+    height: 48px;
+  }
+  .temperature {
+    font-size: 16px;
+    color: $textColorOrange;
+  }
+  &:hover {
+    cursor: pointer;
+    border-bottom: 2px solid #FD7013;
+  }
+}
+.active {
+  background-color: #eeeeee;
+}

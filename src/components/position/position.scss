@@ -1,0 +1,10 @@
+@import '../../styles/variables';
+.position {
+  display: flex;
+  font-size: 14px;
+  color: $textColorOrange;
+
+  .text {
+    line-height: 24px;
+  }
+}
