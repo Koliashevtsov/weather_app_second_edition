@@ -2,17 +2,21 @@ import React from 'react';
 
 import './days-items-list.scss';
 
-import DayItem from '../day-item';
+import DayItemContainer from '../../containers/day-item-container';
 
-const DaysItemsList = () => {
+const DaysItemsList = ({list}) => {
   return (
     <div className="days-items-list">
       <ul className="items-list">
-        <DayItem/>
-        <DayItem/>
-        <DayItem isActive={true}/>
-        <DayItem/>
-        <DayItem/>
+        {
+          list.map((item, index) => {
+            return (
+              <li key={index}>
+                <DayItemContainer item={item}/>
+              </li>
+            );
+          })
+        }
       </ul>
     </div>
   );

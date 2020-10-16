@@ -1,5 +1,9 @@
 .hours-items-list {
   .items-list {
     display: flex;
+
+    li{
+      flex: 1 0 82px;
+    }
   }
 }

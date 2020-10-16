@@ -1,19 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import './hours-items-list.scss';
 
-import HourItem from '../hour-item';
+import HourItemContainer from '../../containers/hour-item-container';
 
-const HoursItemsList = () => {
+const HoursItemsList = (props) => {
+  const { list } = props;
+
   return (
     <div className="hours-items-list">
       <ul className="items-list">
-        <HourItem/>
-        <HourItem isActive={true}/>
-        <HourItem/>
-        <HourItem/>
-        <HourItem/>
-        <HourItem/>
+        {
+          list.map(item => {
+            return (
+              <li key={item.id}>
+                <HourItemContainer item={item} />
+              </li>
+            );
+          })
+        }
       </ul>
     </div>
   );
