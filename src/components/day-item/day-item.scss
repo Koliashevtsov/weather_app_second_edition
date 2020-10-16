@@ -1,7 +1,6 @@
 @import '../../styles/variables';
 
 .day-item {
-  flex: 1 0 100px;
   text-align: center;
   border-top: 2px solid #E3E1E1;
 
@@ -27,7 +26,7 @@
     font-size: 14px;
     text-transform: uppercase;
     color: #ffffff;
-    padding: 10px 32px;
+    padding: 10px 26px;
     background-color: $backgroundColorDark;
   }
   .active {

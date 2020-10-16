@@ -5,12 +5,20 @@ import './hour-item.scss';
 import { IconPartlyCloudly } from '../icons';
 
 const HourItem = (props) => {
-  const { duration, description, temperature, isActive } = props;
-  const clazz = isActive ? 'active' : '';
+  const { item, activeTimeIntervalId, changeActiveHourInterval } = props;
+  const { id, interval, description, temperature } = item;
+  const clazz = activeTimeIntervalId == id ? 'active' : '';
+
+  function handleClick(id){
+    changeActiveHourInterval(id)
+  }
+
   return (
-    <div className={`hour-item ${clazz}`}>
+    <div className={`hour-item ${clazz}`}
+      onClick={() => handleClick(id)}
+      data-testid="clicked">
       <div className={`duration ${clazz}`} data-testid="duration">
-        {duration}
+        {interval}
       </div>
       <div className="description" data-testid="description">
         {description}
@@ -25,9 +33,3 @@ const HourItem = (props) => {
   );
 }
 export default HourItem;
-
-HourItem.defaultProps = {
-  duration: '10:00-12:00',
-  description: 'cloudly',
-  temperature: '+18'
-}

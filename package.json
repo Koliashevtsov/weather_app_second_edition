@@ -22,10 +22,12 @@
     "babel-loader": "^8.1.0",
     "css-loader": "^3.6.0",
     "error-overlay-webpack-plugin": "^0.4.1",
+    "fetch-mock": "^9.10.7",
     "html-webpack-plugin": "^4.3.0",
     "jest-css-modules": "^2.1.0",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.14.1",
+    "redux-mock-store": "^1.5.4",
     "sass": "^1.26.9",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.2.1",
@@ -37,9 +39,12 @@
     "axios": "^0.19.2",
     "core-js": "^3.6.5",
     "jest": "^26.3.0",
+    "luxon": "^1.25.0",
+    "node-fetch": "^2.6.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.0",
-    "redux": "^4.0.5"
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0"
   }
 }
