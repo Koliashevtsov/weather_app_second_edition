@@ -1,7 +1,7 @@
 import React, { useEffect, useContext } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
-import { fetchDailyWeather } from '../../actions';
+import { fetchHourlyWeather } from '../../actions';
 
 import ClimaCellContext from '../../components/clima-cell-context';
 
@@ -16,11 +16,11 @@ const HoursItemsListContainer = () => {
   const date = useSelector(state => state.date.activeDate);
 
   useEffect(() => {
-    dispatch(fetchDailyWeather(serviceData, date))
+    dispatch(fetchHourlyWeather(serviceData, date))
   }, [serviceData, date])
 
-  const loading = useSelector(state => state.dailyWeather.loading)
-  const data = useSelector(state => state.dailyWeather.data)
+  const loading = useSelector(state => state.hourlyWeather.loading)
+  const data = useSelector(state => state.hourlyWeather.data)
 
   if(loading){
     return <LoadingIndicator/>;

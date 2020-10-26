@@ -1,25 +1,25 @@
-const weekReducer = (state, action) => {
+const dailyReducer = (state, action) => {
   if(state === undefined){
     return {
       loading: true,
       error: null,
-      weeklyWeatherList: []
+      dailyWeatherList: []
     };
   }
   switch (action.type) {
-    case 'FETCH_WEEKLY_WEATHER_REQUEST':
+    case 'FETCH_DAILY_WEATHER_REQUEST':
       return {
         ...state,
         loading: true
       };
-    case 'FETCH_WEEKLY_WEATHER_SUCCESS':
+    case 'FETCH_DAILY_WEATHER_SUCCESS':
       return {
         ...state,
         loading: false,
-        weeklyWeatherList: action.payload
+        dailyWeatherList: action.payload
       };
     default:
       return state;
   }
 }
-export default weekReducer;
+export default dailyReducer;
