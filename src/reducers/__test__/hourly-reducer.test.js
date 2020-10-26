@@ -1,8 +1,8 @@
-import dayReducer from '../day-reducer';
+import hourlyReducer from '../hourly-reducer';
 
-describe('day-reducer', () => {
+describe('hourly-reducer', () => {
   it('should return the initial state', () => {
-    expect(dayReducer(undefined, {})).toEqual({
+    expect(hourlyReducer(undefined, {})).toEqual({
       loading: true,
       error: null,
       data: null
@@ -10,7 +10,7 @@ describe('day-reducer', () => {
   })
 
   it('should handle FETCH_WEATHER_REQUEST', () => {
-    expect(dayReducer({}, {
+    expect(hourlyReducer({}, {
       type: 'FETCH_WEATHER_REQUEST'
     })).toEqual({
       loading: true
@@ -18,7 +18,7 @@ describe('day-reducer', () => {
   })
 
   it('should handle FETCH_WEATHER_SUCCESS', () => {
-    expect(dayReducer({}, {
+    expect(hourlyReducer({}, {
       type: 'FETCH_WEATHER_SUCCESS',
       payload: {
         date: 'some data',
@@ -34,7 +34,7 @@ describe('day-reducer', () => {
   })
 
   it('should handle FETCH_WEATHER_FAILURE', () => {
-    expect(dayReducer({}, {
+    expect(hourlyReducer({}, {
       type: 'FETCH_WEATHER_FAILURE',
       payload: 'some error'
     })).toEqual({

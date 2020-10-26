@@ -1,7 +1,7 @@
 import React, { useEffect, useContext } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
-import { fetchWeeklyWeather,  } from '../../actions';
+import { fetchDailyWeather,  } from '../../actions';
 
 import LoadingIndicator from '../../components/loading-indicator';
 import DaysItemsList from '../../components/days-items-list';
@@ -14,7 +14,7 @@ const DaysItemsListContainer = () => {
   const service = useContext(ClimaCellContext);
 
   useEffect(() => {
-    dispatch(fetchWeeklyWeather(service));
+    dispatch(fetchDailyWeather(service));
   }, [service])
 
   const loading = useSelector(state => state.weeklyWeather.loading);

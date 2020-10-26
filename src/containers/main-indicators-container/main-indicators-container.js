@@ -10,7 +10,7 @@ const MainIndicatorsContainer = () => {
 
   const activeDate = useSelector(state => state.date.activeDate);
   const activeTimeIntervalId = useSelector(state => state.date.activeTimeIntervalId);
-  const data = useSelector(state => state.dailyWeather.data);
+  const data = useSelector(state => state.hourlyWeather.data);
 
   useEffect(() => {
     let newItem;

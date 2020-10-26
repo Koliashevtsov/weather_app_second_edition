@@ -1,12 +1,12 @@
 import { combineReducers  } from 'redux';
-import dayReducer from './day-reducer';
-import weekReducer from './week-reducer';
+import hourlyReducer from './hourly-reducer';
+import dailyReducer from './daily-reducer';
 import dateReducer from './date-reducer';
 
 
 const rootReducer = combineReducers({
-  dailyWeather: dayReducer,
-  weeklyWeather: weekReducer,
+  hourlyWeather: hourlyReducer,
+  dailyWeather: dailyReducer,
   date: dateReducer
 })
 

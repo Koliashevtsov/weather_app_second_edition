@@ -1,29 +1,27 @@
-import { dailyWeatherLoaded, dailyWeatherError, dailyWeatherRequest } from '../daily-weather-actions';
+import { dailyWeatherLoaded, dailyWeatherError, dailyWeatherRequest,
+  fetchDailyWeather} from '../daily-weather-actions';
 
 describe('daily-weather-actions', () => {
-  it('should create action to daily weather success', () => {
-    const data = 'data';
+  test('should create action to dailyWeatherLoaded', () => {
+    const data = 'some data';
     const expectedAction = {
-      type: 'FETCH_WEATHER_SUCCESS',
+      type: 'FETCH_DAILY_WEATHER_SUCCESS',
       payload: data
     }
     expect(dailyWeatherLoaded(data)).toEqual(expectedAction)
   })
-
-  it('should create action to daily weather error', () => {
-    const error = 'error';
+  test('should create action to dailyWeatherError', () => {
+    const err = 'some error';
     const expectedAction = {
-      type: 'FETCH_WEATHER_FAILURE',
-      payload: error
+      type: 'FETCH_DAILY_WEATHER_FAILURE',
+      payload: err
     }
-    expect(dailyWeatherError(error)).toEqual(expectedAction)
+    expect(dailyWeatherError(err)).toEqual(expectedAction)
   })
-
-  it('should create action to loading started', () => {
+  test('should create action to dailyWeatherRequest', () => {
     const expectedAction = {
-      type: 'FETCH_WEATHER_REQUEST'
+      type: 'FETCH_DAILY_WEATHER_REQUEST'
     }
     expect(dailyWeatherRequest()).toEqual(expectedAction)
   })
-
 })

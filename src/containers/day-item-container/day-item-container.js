@@ -11,6 +11,7 @@ const DayItemContainer = ({ item }) => {
 
   function changeActiveDate(dateStr) {
     const newDate = new Date(dateStr)
+    console.log(newDate);
     dispatch(setDate(newDate))
   }
 

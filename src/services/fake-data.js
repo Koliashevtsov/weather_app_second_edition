@@ -48,7 +48,7 @@ export default class FakeData {
     };
     this.week = days
   }
-  getWeatherByDay(){
+  getHourlyWeather(){
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve(this.day)
@@ -56,7 +56,7 @@ export default class FakeData {
     });
   }
 
-  getWeatherByWeek(){
+  getDailyWeather(){
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve(this.week)

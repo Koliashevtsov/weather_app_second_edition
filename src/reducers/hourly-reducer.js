@@ -1,4 +1,4 @@
-const dayReducer = (state, action) => {
+const hourlyReducer = (state, action) => {
   console.log(action.type);
   if(state === undefined){
     return {
@@ -33,4 +33,4 @@ const dayReducer = (state, action) => {
       return state;
   }
 }
-export default dayReducer;
+export default hourlyReducer;
