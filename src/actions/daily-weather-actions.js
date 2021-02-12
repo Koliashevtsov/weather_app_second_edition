@@ -16,9 +16,9 @@ const dailyWeatherRequest = () => {
   };
 }
 
-const fetchDailyWeather = (service) => (dispatch) => {
+const fetchDailyWeather = (service, city) => (dispatch) => {
   dispatch(dailyWeatherRequest())
-  return service.getDailyWeather() // i return promise in order to get it in tests
+  return service.getDailyWeather(city) // i return promise in order to get it in tests
     .then(data => dispatch(dailyWeatherLoaded(data)))
     .catch(err => dispatch(dailyWeatherError(err)))
 }

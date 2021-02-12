@@ -11,7 +11,7 @@ import ErrorBoundry from '../error-boundry';
 import TestApiComponent from '../test-api-component';
 
 const App = () => {
-  const stage = 'test'
+  const stage = 'dev'
   if(stage == 'test'){
     return <TestApiComponent/>;
   } else {

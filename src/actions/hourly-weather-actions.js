@@ -17,9 +17,9 @@ const hourlyWeatherRequest = () => {
 }
 
 
-const fetchHourlyWeather = (service, d) => (dispatch) => {
+const fetchHourlyWeather = (service, d, city) => (dispatch) => {
   dispatch(hourlyWeatherRequest())
-  return service.getHourlyWeather(d)
+  return service.getHourlyWeather(d, city)
     .then(data => {
       dispatch(hourlyWeatherLoaded(data))
     })

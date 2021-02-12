@@ -9,13 +9,18 @@
     background-color: $backgroundColorDark;
     color: #ffffff;
   }
-  .active {
-    background-color: #676D77;
+  .duration.active {
+    background-color: $backgroundColorGrey;
   }
   .description {
-    padding-top: 12px;
+    padding: 12px;
+    padding-bottom: 0;
     color: $textColorDark;
     text-transform: uppercase;
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
   .icon {
     height: 48px;
@@ -29,6 +34,6 @@
     border-bottom: 2px solid #FD7013;
   }
 }
-.active {
+.hour-item.active {
   background-color: #eeeeee;
 }

@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import { DateTime } from 'luxon';
 
 import { setTimeIntervalId, setDate } from '../../actions';
 
@@ -8,17 +9,13 @@ import Panels from '../../components/panels';
 const PanelsContainer = () => {
 
   function getInitialTimeIntervalId() {
-    const nowDate = new Date();
-    const nowHour = nowDate.getHours();
-    if((nowHour % 2) === 0){
-      return nowHour;
-    } else {
-      return nowHour - 1;
-    }
+    const nowHour = DateTime.local().hour;
+    const id = nowHour;
+    return id
   }
 
   function getInitialDate() {
-    return new Date();
+    return DateTime.local().toString();
   }
 
   const dispatch = useDispatch();

@@ -13,18 +13,18 @@ const MainIndicatorsContainer = () => {
   const data = useSelector(state => state.hourlyWeather.data);
 
   useEffect(() => {
-    let newItem;
     if(data){
-      newItem = data.intervals.find(i => i.id === activeTimeIntervalId)
+      console.log('data in MainIndicatorsContainer', data);
+      const newItem = data.find(i => i.id === activeTimeIntervalId);
+      setItem(newItem);
     }
-    setItem(newItem);
+
   }, [activeDate, activeTimeIntervalId, data])
 
   if(activeDate && item){
-    const dateStr = activeDate.toJSON()
     return (
       <MainIndicators
-        dateStr={dateStr}
+        date={activeDate}
         temperature={item.temperature}
         description={item.description}/>
     );

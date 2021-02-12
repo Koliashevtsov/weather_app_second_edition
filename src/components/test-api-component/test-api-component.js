@@ -4,7 +4,7 @@ import ClimaCellContext from '../clima-cell-context';
 
 const TestApiComponent = () => {
   const climacellService = useContext(ClimaCellContext);
-  const date = new Date();
+  const date = new Date().toJSON();
   const city = {
     lat: '50.431759',
     lon: '30.517023'

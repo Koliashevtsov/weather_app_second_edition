@@ -8,17 +8,16 @@ import { IconPartlyCloudly } from '../icons';
 const DayItem = (props) => {
   const { item, activeDate, changeActiveDate } = props;
   const { description, minTemp, maxTemp, date } = item;
-  const dateStr = date;
-  const clazzName = new Date(dateStr).getDate() === activeDate.getDate() ? 'active' : '';
+  const clazzName = new Date(date).getDate() === new Date(activeDate).getDate() ? 'active' : '';
 
-  function handleClick(dateStr) {
-    changeActiveDate(dateStr)
+  function handleClick(date) {
+    changeActiveDate(date)
   }
 
   return (
     <div className={`day-item ${clazzName}`}
       data-testid="clicked"
-      onClick={() => handleClick(dateStr)}>
+      onClick={() => handleClick(date)}>
       <div className="description" data-testid="description">
         {description}
       </div>
@@ -29,7 +28,7 @@ const DayItem = (props) => {
         {minTemp}&deg; {maxTemp}&deg;
       </div>
       <div className={`date ${clazzName}`} data-testid="date">
-        { DateTime.fromISO(dateStr).toFormat('dd LLL') }
+        { DateTime.fromISO(date).toFormat('dd LLL') }
       </div>
     </div>
   );
