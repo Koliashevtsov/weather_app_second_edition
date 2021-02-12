@@ -14,7 +14,7 @@ describe('DayItem', () => {
   test('divs must contain appropriate textContent', () => {
     render(<DayItem item={item} activeDate={new Date()}/>)
     expect(screen.getByTestId('description')).toHaveTextContent(/^[a-zA-Z]+$/) // example 'CLOUDLY'
-    expect(screen.getByTestId('temperature')).toHaveTextContent(/^[+-]?\d+\°\s[+-]?\d+\°$/) // example '+18° +20°'
+    expect(screen.getByTestId('temperature')).toHaveTextContent(/^[+-]\d+\°\s[+-]\d+\°$/) // example '+18° +20°'
     expect(screen.getByTestId('date')).toHaveTextContent(/^\d+\s[a-zA-Z]{3}$/) // example '7 JUN'
   })
   test('should call changeActiveDate if click', () => {

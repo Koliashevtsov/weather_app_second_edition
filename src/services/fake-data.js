@@ -42,10 +42,7 @@ const days = [
 
 export default class FakeData {
   constructor(){
-    this.day = {
-      date: '2020-08-27T20:09:14.193Z',
-      intervals: intervals
-    };
+    this.day = intervals;
     this.week = days
   }
   getHourlyWeather(){

@@ -13,7 +13,7 @@ describe('HourItem', () => {
     render(<HourItem item={item}/>)
     expect(screen.getByTestId('duration')).toHaveTextContent(/^\d{2}\:\d{2}\-\d{2}\:\d{2}$/) // example '10:00-12:00'
     expect(screen.getByTestId('description')).toHaveTextContent(/^[a-zA-Z]+$/) // example 'CLOUDLY'
-    expect(screen.getByTestId('temperature')).toHaveTextContent(/^[+-]?\d+\°$/) // example '+18°'
+    expect(screen.getByTestId('temperature')).toHaveTextContent(/^[+-]\d+\°$/) // example '+18°'
   })
   test('should call changeActiveHourInterval if click', () => {
     const mockChangeActiveHourInterval = jest.fn()

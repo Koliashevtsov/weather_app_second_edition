@@ -17,10 +17,7 @@ const hourlyReducer = (state, action) => {
       return {
         ...state,
         loading: false,
-        data: {
-          date: action.payload.date,
-          intervals: action.payload.intervals
-        }
+        data: action.payload
       };
     case 'FETCH_WEATHER_FAILURE':
       return {

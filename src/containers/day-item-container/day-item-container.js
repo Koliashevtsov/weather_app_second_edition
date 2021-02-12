@@ -9,10 +9,9 @@ const DayItemContainer = ({ item }) => {
   const dispatch = useDispatch();
   const activeDate = useSelector(state => state.date.activeDate);
 
-  function changeActiveDate(dateStr) {
-    const newDate = new Date(dateStr)
-    console.log(newDate);
-    dispatch(setDate(newDate))
+  function changeActiveDate(date) {
+    console.log('date before save', date);
+    dispatch(setDate(date))
   }
 
   return (

@@ -18,6 +18,14 @@ const dailyReducer = (state, action) => {
         loading: false,
         dailyWeatherList: action.payload
       };
+    case 'FETCH_DAILY_WEATHER_FAILURE':
+    console.log(action.payload);
+      return {
+        ...state,
+        loading: false,
+        dailyWeatherList: [],
+        error: action.payload
+      };
     default:
       return state;
   }

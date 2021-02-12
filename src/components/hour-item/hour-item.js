@@ -6,7 +6,8 @@ import { IconPartlyCloudly } from '../icons';
 
 const HourItem = (props) => {
   const { item, activeTimeIntervalId, changeActiveHourInterval } = props;
-  const { id, interval, description, temperature } = item;
+  const { id, description, temperature } = item;
+  const interval = id;
   const clazz = activeTimeIntervalId == id ? 'active' : '';
 
   function handleClick(id){

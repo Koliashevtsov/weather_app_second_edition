@@ -1,9 +1,10 @@
 .hours-items-list {
   .items-list {
     display: flex;
-
+    overflow-x: hidden;
     li{
       flex: 1 0 82px;
+      max-width: 85px;
     }
   }
 }
